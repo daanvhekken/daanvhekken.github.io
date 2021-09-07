@@ -11,6 +11,10 @@ body {
     --content-background: #1A1A1D;
 }
 
+a:hover {
+    color: unset;
+    text-decoration: none;
+}
 /* start Buttons */
 .sidebar-button {
     border          : none;
