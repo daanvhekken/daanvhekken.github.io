@@ -1,0 +1,266 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --color-primary      : #950740;
+    --color-primary-light: #C3073F;
+    --color-primary-dark : #6F2232;
+    --color-text         : #4E4E50;
+
+    --content-background: #1A1A1D;
+}
+
+a:hover {
+    color: unset;
+    text-decoration: none;
+}
+/* start Buttons */
+.sidebar-button {
+    border          : none;
+    display         : inline-block;
+    padding         : 8px 16px;
+    vertical-align  : middle;
+    overflow        : hidden;
+    text-decoration : none;
+    color           : inherit;
+    background-color: inherit;
+    text-align      : center;
+    cursor          : pointer;
+    white-space     : nowrap;
+    transition      : background 0.2s;
+}
+
+.sidebar-button {
+    -webkit-touch-callout: none;
+    -webkit-user-select  : none;
+    -khtml-user-select   : none;
+    -moz-user-select     : none;
+    -ms-user-select      : none;
+    user-select          : none
+}
+
+.sidebar-button:disabled {
+    cursor : not-allowed;
+    opacity: 0.3
+}
+
+.sidebar-button:hover {
+    background: rgb(195, 7, 63);
+    background: -moz-linear-gradient(121deg, rgba(195, 7, 63, 1) 0%, rgba(26, 26, 29, 1) 100%);
+    background: -webkit-linear-gradient(121deg, rgba(195, 7, 63, 1) 0%, rgba(26, 26, 29, 1) 100%);
+    background: linear-gradient(121deg, rgba(195, 7, 63, 1) 0%, rgba(26, 26, 29, 1) 100%);
+    filter    : progid:DXImageTransform.Microsoft.gradient(startColorstr="#c3073f", endColorstr="#1a1a1d", GradientType=1);
+}
+
+.topbar .sidebar-button:hover {
+    background-color: unset;
+}
+
+.sidebar-block .sidebar-button {
+    width     : 100%;
+    text-align: left;
+    padding   : 8px 16px
+}
+
+.download-button {
+    border          : none;
+    display         : inline-block;
+    padding         : 8px 16px;
+    vertical-align  : middle;
+    overflow        : hidden;
+    text-decoration : none;
+    text-align      : center;
+    cursor          : pointer;
+    white-space     : nowrap;
+    transition      : background 0.2s;
+    background-color: var(--color-primary-dark);
+    color           : #fff;
+}
+
+.download-button {
+    -webkit-touch-callout: none;
+    -webkit-user-select  : none;
+    -khtml-user-select   : none;
+    -moz-user-select     : none;
+    -ms-user-select      : none;
+    user-select          : none
+}
+
+.download-button:disabled {
+    cursor : not-allowed;
+    opacity: 0.3
+}
+
+.download-button:hover {
+    background-color: var(--color-primary);
+}
+
+
+/* end Buttons */
+
+/* start important css */
+.container {
+    padding: 0.01em 16px
+}
+
+.center {
+    text-align: center !important
+}
+
+.margin {
+    margin: 16px !important
+}
+
+.margin-top {
+    margin-top: 16px !important
+}
+
+.margin-bottom {
+    margin-bottom: 16px !important
+}
+
+.margin-left {
+    margin-left: 16px !important
+}
+
+.margin-right {
+    margin-right: 16px !important
+}
+
+.padding-small {
+    padding: 4px 8px !important
+}
+
+.padding {
+    padding: 8px 16px !important
+}
+
+.padding-large {
+    padding: 12px 24px !important
+}
+
+.padding-16 {
+    padding-top   : 16px !important;
+    padding-bottom: 16px !important
+}
+
+.padding-24 {
+    padding-top   : 24px !important;
+    padding-bottom: 24px !important
+}
+
+.padding-32 {
+    padding-top   : 32px !important;
+    padding-bottom: 32px !important
+}
+
+.padding-48 {
+    padding-top   : 48px !important;
+    padding-bottom: 48px !important
+}
+
+.padding-64 {
+    padding-top   : 64px !important;
+    padding-bottom: 64px !important
+}
+
+.float-left {
+    float: left !important
+}
+
+.float-right {
+    float: right !important
+}
+
+.content {
+    margin-left     : auto;
+    margin-right    : auto;
+    max-width       : 980px;
+    background-color: var(--content-background);
+    color           : #f1f1f1;
+}
+
+.topbar {
+    position: fixed;
+    width   : 100%;
+    z-index : 1;
+    top     : 0;
+
+    background-color: var(--color-primary-light);
+    color           : #fff;
+    font-size       : 24px;
+}
+
+.sidebar {
+    height    : 100%;
+    width     : 200px;
+    background: rgb(195, 7, 63);
+    background: -moz-linear-gradient(121deg, rgba(195, 7, 63, 1) 0%, rgba(26, 26, 29, 1) 100%);
+    background: -webkit-linear-gradient(121deg, rgba(195, 7, 63, 1) 0%, rgba(26, 26, 29, 1) 100%);
+    background: linear-gradient(121deg, rgba(195, 7, 63, 1) 0%, rgba(26, 26, 29, 1) 100%);
+    filter    : progid:DXImageTransform.Microsoft.gradient(startColorstr="#c3073f", endColorstr="#1a1a1d", GradientType=1);
+    color     : #fff;
+    position  : fixed !important;
+    z-index   : 1;
+    overflow  : auto;
+    top       : 0;
+}
+
+@media (min-width:993px) {
+    .sidebar.collapse {
+        display: block !important
+    }
+
+    .hide-large {
+        display: none !important
+    }
+}
+
+@media (max-width:992px) {
+    .sidebar.collapse {
+        display: none
+    }
+
+    .main-content {
+        margin-left : 0 !important;
+        margin-right: 0 !important
+    }
+}
+
+.main-content {
+    transition: margin-left .4s
+}
+
+.sidebar-block .sidebar-item {
+    width      : 100%;
+    display    : block;
+    border     : none;
+    white-space: normal;
+    float      : none;
+    outline    : 0;
+    text-align : center;
+    padding    : 8px 0;
+    margin     : auto 0;
+}
+
+.sidebar-block .center .sidebar-item {
+    text-align: center
+}
+
+.animate-left {
+    position : relative;
+    animation: animateleft 0.4s
+}
+
+@keyframes animateleft {
+    from {
+        left   : -300px;
+        opacity: 0
+    }
+
+    to {
+        left   : 0;
+        opacity: 1
+    }
+}
