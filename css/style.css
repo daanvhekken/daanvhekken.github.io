@@ -19,6 +19,12 @@ a:hover {
 }
 
 /* start Buttons */
+
+/* bootstrap button override */
+.btn-primary {
+    background: linear-gradient(121deg, rgba(195, 7, 63, 1) 0%, rgba(26, 26, 29, 1) 100%)!important;
+    border: 0!important;
+}
 .sidebar-button {
     border          : none;
     display         : inline-block;
@@ -236,6 +242,7 @@ a:hover {
     height: 100vh;
     background: rgb(26,26,29);
     background: linear-gradient(145deg, rgba(26,26,29,1) 30%, rgba(78,78,80,1) 100%);
+    padding: 32px;
 }
 
 .sidebar-block .sidebar-item {
@@ -298,4 +305,46 @@ a:hover {
 }
 .socials i {
     color: #fff;
+}
+/* orderd skills list */
+/* orderd skills list */
+ol.gradient-list {
+    counter-reset: gradient-counter;
+    list-style: none;
+    margin: 1.75rem 0;
+    padding-left: 1rem;
+}
+ol.gradient-list > li {
+    background: transparent;
+    border-radius: 0 0.5rem 0.5rem 0.5rem;
+    counter-increment: gradient-counter;
+    margin-top: 1rem;
+    min-height: 3rem;
+    padding: 1rem 1rem 1rem 3rem;border: 1px solid #fff;display: flex;
+    position: relative;
+    width: 600px;
+}
+ol.gradient-list > li::before, ol.gradient-list > li::after {
+    background: linear-gradient(121deg, rgba(195, 7, 63, 1) 0%, rgba(26, 26, 29, 1) 100%);
+    border-radius: 1rem 1rem 0 1rem;
+    content: '';
+    height: 3rem;
+    left: -1rem;
+    overflow: hidden;
+    position: absolute;
+    top: -1rem;
+    width: 3rem;
+}
+ol.gradient-list > li::before {
+    align-items: flex-end;
+    content: counter(gradient-counter);
+    color: #fff;
+    display: flex;
+    font: 900 1.5em/1 'Montserrat';
+    justify-content: flex-end;
+    padding: 0.125em 0.25em;
+    z-index: 1;
+}
+ol.gradient-list > li + li {
+    margin-top: 2rem;
 }

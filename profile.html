@@ -1,37 +1,88 @@
 <!DOCTYPE html>
 <title>Profile</title>
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+<link
+    href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900'
+    rel='stylesheet' type='text/css'>
 <!-- bootstrap css -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script type="text/javascript" src="/js/scripts.js"></script>
 <!-- bootstrap javascript -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 <link rel="stylesheet" href="css/style.css">
 <html>
-    <body class="content" style="max-width:1600px">
-        <nav class="sidebar sidebar-block animate-left collapse center" style="z-index:3; width:300px; font-weight:bold"
-            id="mySidebar"><br>
-            <h3 class="padding-64 center"><b>Daan van Hekken</b></h3>
-            <a href="/index.html" onclick="w3_close()" class="sidebar-item sidebar-button">Home</a>
-            <a href="/dashboard.html" onclick="w3_close()" class="sidebar-item sidebar-button">Dashboard</a>
-            <a href="/profile.html" onclick="w3_close()" class="sidebar-item sidebar-button" style="text-decoration: underline;">Profile</a>
-            <a href="/blog.html" onclick="w3_close()" class="sidebar-item sidebar-button">Blog</a>
-            <a href="/faq.html" onclick="w3_close()" class="sidebar-item sidebar-button">Faq</a>
-            <a href="/contact.html" onclick="w3_close()" class="sidebar-item sidebar-button">Contact</a>
-        </nav>
-        <div class="main-content" style="margin-left:300px">
-            <div class="hide-large" style="margin-top:83px"></div>
-            <div class="container center padding-32" id="about">
-                <h3 style="color: var(--color-primary);"><b>Profile</b></h3>
-                <button class="download-button padding-large margin-top margin-bottom">Download
-                    Resume
-                </button>
-                <button class="download-button padding-large margin-top margin-bottom">Open
-                    Resume in a new tab
-                </button>
+
+<body class="content" style="max-width:1600px">
+    <nav class="sidebar sidebar-block animate-left collapse center" style="z-index:3; width:300px; font-weight:bold"
+        id="mySidebar"><br>
+        <h3 class="padding-64 center"><b>Daan van Hekken</b></h3>
+        <a href="/index.html" onclick="w3_close()" class="sidebar-item sidebar-button">Home</a>
+        <a href="/dashboard.html" onclick="w3_close()" class="sidebar-item sidebar-button">Dashboard</a>
+        <a href="/profile.html" onclick="w3_close()" class="sidebar-item sidebar-button"
+            style="text-decoration: underline;">Profile</a>
+        <a href="/blog.html" onclick="w3_close()" class="sidebar-item sidebar-button">Blog</a>
+        <a href="/faq.html" onclick="w3_close()" class="sidebar-item sidebar-button">Faq</a>
+        <a href="/contact.html" onclick="w3_close()" class="sidebar-item sidebar-button">Contact</a>
+    </nav>
+    <header class="topbar hide-large padding-16">
+        <span class="float-left padding">Daan van Hekken</span>
+        <a href="javascript:void(0)" class="float-right sidebar-button" onclick="open_sidemenu()">☰</a>
+    </header>
+
+    <div class="mobile-overlay hide-large" onclick="close_sidemenu()" style="cursor:pointer" title="close side menu"
+        id="mobile_overlay"></div>
+
+    <div class="main-content" style="margin-left:300px">
+        <div class="hide-large" style="margin-top:83px"></div>
+        <div class="center padding-32">
+            <div style="display: flex;">
+                <div style="width: 40%;">
+                    <div class="card" style="width: 18rem; background: transparent; width: 18rem; margin: 0 auto;">
+                        <img class="card-img-top" src="/recources/images/me.jpg" alt="This is a picture of myself.">
+                        <div class="card-body">
+                            <h5 class="card-title">Me!</h5>
+                            <p class="card-text">Hi, my name is Daan van Hekken and im 21 years old. I just started HBO
+                                ICT. In the future i want to work a back-end programming job in a bigger city. The
+                                company
+                                can't be to big because i do not want to be just another programmer. Web apps seem to
+                                interest
+                                me the most for now but i would like to explore other types of applications.</p>
+                            <a href="https://www.linkedin.com/in/daanvanhekken/" class="btn btn-primary">Find out
+                                more!</a>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 60%; height: calc(100vh - 100px); overflow: scroll;">
+                    <h3>List of my characteristics and skills!</h3>
+                    <ol class="gradient-list">
+                        <li>Problem-solving</li>
+                        <li>Communication</li>
+                        <li>Motivated</li>
+                        <li>Attention to details</li>
+                        <li>Arganized</li>
+                        <li>Eager</li>
+                        <li>Curiosity</li>
+                        <li>Accountability</li>
+                        <li>Teamwork</li>
+                    </ol>
+                </div>
             </div>
         </div>
-    </body>
+    </div>
+    <div class="socials">
+        <a href="https://www.linkedin.com/in/daanvanhekken/" target="_blank" class="linkedin-link w-inline-block"><i
+                class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/daanvhekken" target="_blank" class="github-link w-inline-block"><i
+                class="bi bi-github"></i></a>
+    </div>
+</body>
+
 </html>
