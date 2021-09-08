@@ -1,37 +1,56 @@
 <!DOCTYPE html>
 <title>Home</title>
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900'
+    rel='stylesheet' type='text/css'>
 <!-- bootstrap css -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script type="text/javascript" src="/js/scripts.js"></script>
 <!-- bootstrap javascript -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 <link rel="stylesheet" href="css/style.css">
 <html>
+
 <body class="content" style="max-width:1600px">
     <nav class="sidebar sidebar-block animate-left collapse center" style="z-index:3; width:300px; font-weight:bold"
-        id="mySidebar"><br>
+        id="sidebar"><br>
         <h3 class="padding-64 center"><b>Daan van Hekken</b></h3>
-        <a href="/index.html" onclick="w3_close()" class="sidebar-item sidebar-button" style="text-decoration: underline;">Home</a>
-        <a href="/dashboard.html" onclick="w3_close()" class="sidebar-item sidebar-button">Dashboard</a>
-        <a href="/profile.html" onclick="w3_close()" class="sidebar-item sidebar-button">Profile</a>
-        <a href="/blog.html" onclick="w3_close()" class="sidebar-item sidebar-button">Blog</a>
-        <a href="/faq.html" onclick="w3_close()" class="sidebar-item sidebar-button">Faq</a>
-        <a href="/contact.html" onclick="w3_close()" class="sidebar-item sidebar-button">Contact</a>
+        <a onclick="close_sidemenu()" class="sidebar-item sidebar-button" style="text-decoration: underline;"><i class="bi bi-house mr-2"></i>Home</a>
+        <a href="/dashboard.html" onclick="close_sidemenu()" class="sidebar-item sidebar-button"><i class="bi bi-window-sidebar mr-2"></i>Dashboard</a>
+        <a href="/profile.html" onclick="close_sidemenu()" class="sidebar-item sidebar-button"><i class="bi bi-person-square mr-2"></i>Profile</a>
+        <a href="/blog.html" onclick="close_sidemenu()" class="sidebar-item sidebar-button"><i class="bi bi-newspaper mr-2"></i>Blog</a>
+        <a href="/faq.html" onclick="close_sidemenu()" class="sidebar-item sidebar-button"><i class="bi bi-question-square mr-2"></i>Faq</a>
+        <a href="/contact.html" onclick="close_sidemenu()" class="sidebar-item sidebar-button"><i class="bi bi-envelope-open mr-2"></i>Contact</a>
     </nav>
+
+    <header class="topbar hide-large padding-16">
+        <span class="float-left padding">Daan van Hekken</span>
+        <a href="javascript:void(0)" class="float-right sidebar-button" onclick="open_sidemenu()">☰</a>
+    </header>
+
+    <div class="mobile-overlay hide-large" onclick="close_sidemenu()" style="cursor:pointer"
+     title="close side menu" id="mobile_overlay"></div>
+
     <div class="main-content" style="margin-left:300px">
         <div class="hide-large" style="margin-top:83px"></div>
-        <div class="container center padding-32" id="about">
+        <div class="center padding-32" id="about">
             <h3 style="color: var(--color-primary);"><b>About Me</b></h3>
-            <button class="download-button padding-large margin-top margin-bottom">Download
-                Resume
-            </button>
-            <button class="download-button padding-large margin-top margin-bottom">Open
-                Resume in a new tab
-            </button>
+            <a href="/recources/Profile.pdf" target="_blank" class="download-button padding-large margin-top margin-bottom">
+                Open pdf in a new tab<i class="bi bi-file-earmark-pdf ml-2"></i>
+            </a>
+            <a href="/recources/Profile.pdf" class="download-button padding-large margin-top margin-bottom" download>
+                Download pdf<i class="bi bi-download ml-2"></i>
+            </a>
         </div>
     </div>
 </body>
+
 </html>
