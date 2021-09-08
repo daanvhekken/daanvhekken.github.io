@@ -282,5 +282,20 @@ a:hover {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
-    animation:opac 0.8s
+    animation:opac 0.8s;
+}
+
+.socials {
+    position: fixed;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    display: flex;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    flex-direction: column;
+}
+.socials i {
+    color: #fff;
 }
