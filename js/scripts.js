@@ -8,10 +8,3 @@ function close_sidemenu() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
 }
-
-function download_pdf() {
-    var link = document.getElementById('#download_pdf_button');
-    link.href = url;
-    link.download = '/recources/Profile.pdf';
-    link.dispatchEvent(new MouseEvent('click'));
-}
