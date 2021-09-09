@@ -235,11 +235,22 @@ a:hover {
         margin-left : 0 !important;
         margin-right: 0 !important
     }
+
+    .profile-content {
+        display: block!important;
+    }
+    .profile-content .info {
+        width: 100%!important;
+    }
+    .profile-content .skills {
+        width: 100%!important;
+    }
 }
 
 .main-content {
     transition: margin-left .4s;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     background: rgb(26,26,29);
     background: linear-gradient(145deg, rgba(26,26,29,1) 30%, rgba(78,78,80,1) 100%);
     padding: 32px;
@@ -292,6 +303,18 @@ a:hover {
     animation:opac 0.8s;
 }
 
+.profile-content {
+    display: flex;
+}
+.profile-content .info {
+    width: 40%;
+}
+.profile-content .skills {
+    width: 60%;
+    height: calc(100vh - 100px);
+    overflow: scroll;
+}
+
 .socials {
     position: fixed;
     top: auto;
@@ -322,7 +345,7 @@ ol.gradient-list > li {
     min-height: 3rem;
     padding: 1rem 1rem 1rem 3rem;border: 1px solid #fff;display: flex;
     position: relative;
-    width: 600px;
+    width: auto;
 }
 ol.gradient-list > li::before, ol.gradient-list > li::after {
     background: linear-gradient(121deg, rgba(195, 7, 63, 1) 0%, rgba(26, 26, 29, 1) 100%);
