@@ -225,6 +225,9 @@ a:hover {
     .hide-large {
         display: none !important
     }
+    .footer-socials {
+        display: block;
+    }
 }
 
 @media (max-width:992px) {
@@ -247,6 +250,9 @@ a:hover {
 
     .profile-content .skills {
         width: 100% !important;
+    }
+    .footer-socials {
+        display: none;
     }
 }
 
@@ -316,15 +322,13 @@ a:hover {
 
 .profile-content .skills {
     width   : 60%;
-    height  : calc(100vh - 100px);
-    overflow: scroll;
 }
 
 .socials {
     position      : fixed;
     top           : auto;
     right         : 0;
-    bottom        : 0;
+    bottom        : -15px;
     z-index       : 100;
     display       : flex;
     padding-right : 30px;
@@ -343,6 +347,8 @@ ol.gradient-list {
     list-style   : none;
     margin       : 1.75rem 0;
     padding-left : 1rem;
+    overflow: scroll;
+    height  : calc(100vh - 100px);
 }
 
 ol.gradient-list>li {
