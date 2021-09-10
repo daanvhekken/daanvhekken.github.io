@@ -39,7 +39,14 @@
 
 <header class="topbar hide-large padding-16">
     <span class="float-left padding">Daan van Hekken</span>
-    <a href="javascript:void(0)" class="float-right sidebar-button" onclick="open_sidemenu()">☰</a>
+    <a href="javascript:void(0)" class="float-right sidebar-button" onclick="open_sidemenu()"><div id="nav-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div></a>
 </header>
 
 <div class="mobile-overlay hide-large" onclick="close_sidemenu()" style="cursor:pointer"
@@ -62,30 +69,33 @@
           </div>
 
           <div class="row">
-            <div class="col-md-6" style="border: 1px solid #fff;padding: 32px; border-radius: 5px;">
-                <div class="row">
-                  <div class="col-md-4">
-                    <img src="/recources/images/ICT.png" class="img-responsive" alt="" style="width: 300px;">
-                  </div>
-                  <div class="col-md-8" style="text-align: left;">
-                    <h3>About my study</h3>
-                  <p>At my former education i'm was learning the programming language Java. I would like to learn multiple programming languages this way i'll be more flexible when i'm going to work at a company later. I also want to work in smaller and larger projects with smaller or larger teams.</p>
-    
-                  </div>
-                </div>
+            <div class="col-md-6">
+                <div class="col-md-12" style="border: 1px solid #fff;padding: 32px; padding-left: 5px; border-radius: 5px; height: 100%;">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                            <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_sfgmgbyl.json"  background="transparent"  speed="1"  style="width: 150px; height: 150px;"  loop  autoplay></lottie-player>
+                        </div>
+                        <div class="col-md-8" style="text-align: left;">
+                            <h3>About my study</h3>
+                            <p>At my former education i was learning the programming language Java. I would like to learn multiple programming languages this way i'll be more flexible when i'm going to work at a company later. I also want to work in smaller and larger projects with smaller or larger teams.</p>
+                        </div>
+                      </div> 
+                 </div>
               </div>
-
-              <div class="col-md-6" style="border: 1px solid #fff;padding: 32px; border-radius: 5px;">
-                <div class="row">
-                  <div class="col-md-4">
-                    <img src="/recources/images/me.jpg" class="img-responsive" alt="" style="width: 300px;">
-                  </div>
-                  <div class="col-md-8" style="text-align: left;">
-                    <h3></h3>
-                  <p>At my former education i'm was learning the programming language Java. I would like to learn multiple programming languages this way i'll be more flexible when i'm going to work at a company later. I also want to work in smaller and larger projects with smaller or larger teams.</p>
-    
-                  </div>
-                </div>
+              <div class="col-md-6">
+                <div class="col-md-12" style="border: 1px solid #fff;padding: 32px; border-radius: 5px; height: 100%;">
+                    <div class="row">
+                        <div class="col-md-4">
+                          <img src="/recources/images/me.webp" class="img-responsive" alt="" style="width: 100px;">
+                        </div>
+                        <div class="col-md-8" style="text-align: left;">
+                            <h3>About my study</h3>
+                            <p>Software developer MBO 4 at scalda graduate. Studying HBO ICT at HZ University of Applied Sciences. Software developer at Rounded.com. working on webshop website and creating webapps for Rounded.com employees.</p>
+                        </div>
+                      </div> 
+                 </div>
+                
               </div>
 
           </div>
