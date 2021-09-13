@@ -2,12 +2,13 @@
 <title>FAQ</title>
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
 <!-- bootstrap css -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script type="text/javascript" src="/js/scripts.js"></script>
-<!-- bootstrap javascript -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- bootstrap css and javascript -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="css/style.css">
 <html lang="en">
     <body class="content">
@@ -38,13 +39,67 @@
         <div class="main-content" style="margin-left:300px">
             <div class="hide-large" style="margin-top:83px"></div>
             <div class="center padding-32" id="about">
-                <h3 style="color: var(--color-primary);"><b>About Me</b></h3>
-                <a href="/recources/Profile.pdf" target="_blank" class="download-button padding-large margin-top margin-bottom">
-                    Open pdf in a new tab<i class="bi bi-file-earmark-pdf ml-2"></i>
-                </a>
-                <a href="/recources/Profile.pdf" class="download-button padding-large margin-top margin-bottom" download>
-                    Download pdf<i class="bi bi-download ml-2"></i>
-                </a>
+                <div id="accordionExample" class="accordion shadow">
+
+                    <!-- Accordion item 1 -->
+                    <div class="card">
+                      <div id="headingOne" class="card-header gradient-background shadow-sm border-0">
+                        <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="d-block position-relative text-white text-uppercase collapsible-link py-2">What do i do if i need to print a document?</a></h6>
+                      </div>
+                      <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse show">
+                        <div class="card-body p-5">
+                          <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                        </div>
+                      </div>
+                    </div>
+            
+                    <!-- Accordion item 2 -->
+                    <div class="card">
+                      <div id="headingTwo" class="card-header gradient-background shadow-sm border-0">
+                        <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="d-block position-relative collapsed text-white text-uppercase collapsible-link py-2">How do i scan a document and sent it to my laptop?</a></h6>
+                      </div>
+                      <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" class="collapse">
+                        <div class="card-body p-5">
+                          <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                        </div>
+                      </div>
+                    </div>
+            
+                    <!-- Accordion item 3 -->
+                    <div class="card">
+                      <div id="headingThree" class="card-header gradient-background shadow-sm border-0">
+                        <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" class="d-block position-relative collapsed text-white text-uppercase collapsible-link py-2">What do i do when i get sick or show symptoms of covid-19?</a></h6>
+                      </div>
+                      <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse">
+                        <div class="card-body p-5">
+                          <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Accordion item 4 -->
+                    <div class="card">
+                        <div id="headingFour" class="card-header gradient-background shadow-sm border-0">
+                          <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" class="d-block position-relative collapsed text-white text-uppercase collapsible-link py-2">How do i book a project space in one of the wings?</a></h6>
+                        </div>
+                        <div id="collapseFour" aria-labelledby="headingFour" data-parent="#accordionExample" class="collapse">
+                          <div class="card-body p-5">
+                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Accordion item 5 -->
+                    <div class="card">
+                        <div id="headingFive" class="card-header gradient-background shadow-sm border-0">
+                          <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" class="d-block position-relative collapsed text-white text-uppercase collapsible-link py-2">What are the instructions if you want to park your car at the HZ parking lot?</a></h6>
+                        </div>
+                        <div id="collapseFive" aria-labelledby="headingFive" data-parent="#accordionExample" class="collapse">
+                          <div class="card-body p-5">
+                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                          </div>
+                        </div>
+                      </div>
             </div>
         </div>
         <div class="socials">
