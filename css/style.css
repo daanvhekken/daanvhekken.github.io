@@ -343,7 +343,7 @@ a:hover {
 }
 
 .socials {
-    position      : fixed;
+    position      : absolute;
     top           : auto;
     right         : 0;
     bottom        : -20px;
@@ -522,36 +522,24 @@ ol.gradient-list>li+li {
     background: transparent;
     text-align: left;
   }
+  .accordion-item {
+    background-color: transparent;
+    border-width: 0px;
+}
+.accordion-button {
+    color: #fff;
+}
+.accordion-button:focus {
+    border-color: unset;
+    box-shadow: unset;
+}
 
-  .collapsible-link::before {
-    content: '';
-    width: 14px;
-    height: 2px;
-    background: #fff;
-    position: absolute;
-    top: calc(50% - 1px);
-    right: 1rem;
-    display: block;
-    transition: all 0.3s;
-  }
-  
-  /* Vertical line */
-  .collapsible-link::after {
-    content: '';
-    width: 2px;
-    height: 14px;
-    background: #fff;
-    position: absolute;
-    top: calc(50% - 7px);
-    right: calc(1rem + 6px);
-    display: block;
-    transition: all 0.3s;
-  }
-  
-  .collapsible-link[aria-expanded='true']::after {
-    transform: rotate(90deg) translateX(-1px);
-  }
-  
-  .collapsible-link[aria-expanded='true']::before {
-    transform: rotate(180deg);
-  }
+.accordion-button:not(.collapsed) {
+    color: unset;
+}
+.accordion-button::after {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-chevron-down' viewBox='0 0 16 16'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-chevron-up' viewBox='0 0 16 16'%3e%3cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3e%3c/svg%3e");
+}
