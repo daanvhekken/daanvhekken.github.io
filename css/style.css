@@ -399,6 +399,10 @@ ol.gradient-list>li+li {
     border-color: unset;
     box-shadow  : unset;
 }
+.accordion-item:first-of-type .accordion-button {
+   border-top-left-radius:  5px!important;
+   border-top-right-radius:  5px!important;
+}
 
 /* accordion arrows color change*/
 .accordion-button:not(.collapsed) {
