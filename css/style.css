@@ -319,11 +319,13 @@ footer {
     height       : 100%;
 }
 
-.info .card {
-    width       : 14rem;
+.card {
     background  : transparent;
     margin      : 0 auto;
     border-color: #fff;
+}
+.info .card {
+    width: 14rem;
 }
 
 /* orderd skills list */
