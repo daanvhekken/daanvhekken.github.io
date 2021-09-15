@@ -1,4 +1,5 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+@import url("/css/burger-menu.css");
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -37,7 +38,7 @@ a:hover {
 .sidebar-button {
     border          : none;
     display         : inline-block;
-    padding         : 8px 16px;
+    padding         : 19px 20px;
     vertical-align  : middle;
     overflow        : hidden;
     text-decoration : none;
@@ -398,6 +399,10 @@ ol.gradient-list>li+li {
 .accordion-button:focus {
     border-color: unset;
     box-shadow  : unset;
+}
+.accordion-item:first-of-type .accordion-button {
+   border-top-left-radius:  5px!important;
+   border-top-right-radius:  5px!important;
 }
 
 /* accordion arrows color change*/

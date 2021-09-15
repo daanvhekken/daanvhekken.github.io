@@ -33,10 +33,19 @@
        <a onclick="close_sidemenu()" class="sidebar-item sidebar-button" style="text-decoration: underline;"><i
                class="bi bi-envelope-open me-2"></i>Contact</a>
    </nav>
-        <header class="topbar hide-large p-2">
-            <span class="float-left padding">Daan van Hekken</span>
-            <a href="javascript:void(0)" class="float-right sidebar-button" onclick="open_sidemenu()">☰</a>
-        </header>
+   <header class="topbar hide-large padding-16">
+    <span class="float-left p-3">Daan van Hekken</span>
+    <a href="javascript:void(0)" class="float-right sidebar-button" onclick="open_sidemenu()">
+      <div id="nav-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </a>
+  </header>
 
         <div class="mobile-overlay hide-large" onclick="close_sidemenu()" style="cursor:pointer"
              title="close side menu" id="mobile_overlay"></div>
