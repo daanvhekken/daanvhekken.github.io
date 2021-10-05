@@ -11,15 +11,31 @@ body {
     --color-primary-dark : #6F2232;
     --color-text         : #4E4E50;
 
-    --content-background: #1A1A1D;
+    --content-background-backup: #1A1A1D;
+    --content-background: linear-gradient(145deg, rgba(26, 26, 29, 1) 30%, rgba(78, 78, 80, 1) 100%);
+
+    --gradient-background-backup: rgb(195, 7, 63);
+    --gradient-background: linear-gradient(121deg, rgba(195, 7, 63, 1) 0%, rgba(26, 26, 29, 1) 100%);
+    --gradient-background-firefox: -moz-linear-gradient(121deg, rgba(195, 7, 63, 1) 0%, rgba(26, 26, 29, 1) 100%);
+    --gradient-background-chrome: -webkit-linear-gradient(121deg, rgba(195, 7, 63, 1) 0%, rgba(26, 26, 29, 1) 100%);
+    --gradient-filter-microsoft: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c3073f", endColorstr="#1a1a1d", GradientType=1);
+
+
+}
+/* make scrollbar thin on all browsers */
+::-webkit-scrollbar {
+    width: 3px;  /* Remove scrollbar space */
+}
+ol {
+    scrollbar-width: thin;
 }
 
 .gradient-background {
-    background: rgb(195, 7, 63);
-    background: -moz-linear-gradient(121deg, rgba(195, 7, 63, 1) 0%, rgba(26, 26, 29, 1) 100%);
-    background: -webkit-linear-gradient(121deg, rgba(195, 7, 63, 1) 0%, rgba(26, 26, 29, 1) 100%);
-    background: linear-gradient(121deg, rgba(195, 7, 63, 1) 0%, rgba(26, 26, 29, 1) 100%);
-    filter    : progid:DXImageTransform.Microsoft.gradient(startColorstr="#c3073f", endColorstr="#1a1a1d", GradientType=1);
+    background: var(--gradient-background-backup);
+    background: var(--gradient-background-firefox);
+    background: var(--gradient-background-chrome);
+    background: var(--gradient-background);
+    filter    : var(--gradient-filter-microsoft);
 }
 
 a:hover {
@@ -28,12 +44,6 @@ a:hover {
 }
 
 /* start Buttons */
-
-/* bootstrap button override */
-.btn-primary {
-    background: linear-gradient(121deg, rgba(195, 7, 63, 1) 0%, rgba(26, 26, 29, 1) 100%) !important;
-    border    : 0 !important;
-}
 
 .sidebar-button {
     border          : none;
@@ -65,11 +75,11 @@ a:hover {
 }
 
 .sidebar-button:hover {
-    background: rgb(195, 7, 63);
-    background: -moz-linear-gradient(121deg, rgba(195, 7, 63, 1) 0%, rgba(26, 26, 29, 1) 100%);
-    background: -webkit-linear-gradient(121deg, rgba(195, 7, 63, 1) 0%, rgba(26, 26, 29, 1) 100%);
-    background: linear-gradient(121deg, rgba(195, 7, 63, 1) 0%, rgba(26, 26, 29, 1) 100%);
-    filter    : progid:DXImageTransform.Microsoft.gradient(startColorstr="#c3073f", endColorstr="#1a1a1d", GradientType=1);
+    background: var(--gradient-background-backup);
+    background: var(--gradient-background-firefox);
+    background: var(--gradient-background-chrome);
+    background: var(--gradient-background);
+    filter    : var(--gradient-filter-microsoft);
 }
 
 .topbar .sidebar-button:hover {
@@ -82,7 +92,7 @@ a:hover {
     padding   : 8px 16px
 }
 
-.download-button {
+.button {
     border          : none;
     display         : inline-block;
     padding         : 8px 16px;
@@ -93,12 +103,16 @@ a:hover {
     cursor          : pointer;
     white-space     : nowrap;
     transition      : background 0.2s;
-    background-color: var(--color-primary-dark);
+    background: var(--gradient-background-backup);
+    background: var(--gradient-background-firefox);
+    background: var(--gradient-background-chrome);
+    background: var(--gradient-background);
+    filter    : var(--gradient-filter-microsoft);
     color           : #fff;
     border-radius   : 10px;
 }
 
-.download-button {
+.button {
     -webkit-touch-callout: none;
     -webkit-user-select  : none;
     -khtml-user-select   : none;
@@ -107,13 +121,13 @@ a:hover {
     user-select          : none
 }
 
-.download-button:disabled {
-    cursor : not-allowed;
+.button[disabled] {
+    pointer-events: none;
     opacity: 0.3
 }
 
-.download-button:hover {
-    background-color: var(--color-primary);
+.button:hover {
+    background: rgba(0, 0, 0, 0.2);
 }
 
 .button-dev-languages {
@@ -176,11 +190,11 @@ footer {
 .sidebar {
     height    : 100%;
     width     : 200px;
-    background: rgb(195, 7, 63);
-    background: -moz-linear-gradient(121deg, rgba(195, 7, 63, 1) 0%, rgba(26, 26, 29, 1) 100%);
-    background: -webkit-linear-gradient(121deg, rgba(195, 7, 63, 1) 0%, rgba(26, 26, 29, 1) 100%);
-    background: linear-gradient(121deg, rgba(195, 7, 63, 1) 0%, rgba(26, 26, 29, 1) 100%);
-    filter    : progid:DXImageTransform.Microsoft.gradient(startColorstr="#c3073f", endColorstr="#1a1a1d", GradientType=1);
+    background: var(--gradient-background-backup);
+    background: var(--gradient-background-firefox);
+    background: var(--gradient-background-chrome);
+    background: var(--gradient-background);
+    filter    : var(--gradient-filter-microsoft);
     color     : #fff;
     position  : fixed !important;
     z-index   : 1;
@@ -233,8 +247,8 @@ footer {
     transition: margin-left .4s;
     min-height: 100vh;
     height    : 100%;
-    background: rgb(26, 26, 29);
-    background: linear-gradient(145deg, rgba(26, 26, 29, 1) 30%, rgba(78, 78, 80, 1) 100%);
+    background: var(--content-background-backup);
+    background: var(--content-background);
     padding   : 32px;
 }
 
@@ -329,13 +343,13 @@ footer {
     width: 14rem;
 }
 
-/* orderd skills list */
+/* ordered skills list */
 ol.gradient-list {
     counter-reset: gradient-counter;
     list-style   : none;
     margin       : 1.75rem 0;
     padding-left : 1rem;
-    overflow     : scroll;
+    overflow     : auto;
     height       : calc(100vh - 100px);
 }
 
