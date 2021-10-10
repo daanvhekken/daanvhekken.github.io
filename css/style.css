@@ -338,6 +338,7 @@ footer {
     background  : transparent;
     margin      : 0 auto;
     border-color: #fff;
+    margin-top  : 10px;
 }
 .info .card {
     width: 14rem;
@@ -394,6 +395,17 @@ ol.gradient-list>li+li {
     margin-top: 2rem;
 }
 
+/* tables */
+.table tr + .active {
+    color: lightblue;
+}
+.progress-bar {
+    background: var(--gradient-background-backup);
+    background: var(--gradient-background-firefox);
+    background: var(--gradient-background-chrome);
+    background: var(--gradient-background);
+    filter    : var(--gradient-filter-microsoft);
+}
 /* accordions */
 .accordion .card {
     border    : 0px;
