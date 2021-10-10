@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Dashboard</title>
+    <meta name="description" content="Table with all courses and grades.">
 </head>
 <html lang="en">
 <body class="content">
@@ -54,7 +55,10 @@
 <div class="main-content" style="margin-left:300px">
     <div class="hide-large" style="margin-top:83px"></div>
 
-
+    <p>Progressbar is per course and according to learn.hz.nl</p>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 24%;" aria-valuenow="24" aria-valuemin="0" aria-valuemax="100">24%</div>
+      </div>
     <table class="table text-light">
         <thead>
          <tr>
@@ -79,7 +83,7 @@
         <td>Written Exam</td>
         <td>-</td>
         </tr>
-        <tr>
+        <tr class="active">
         <td>Programming Basics</td>
         <td>5</td>
         <td>Case Study Exam</td>

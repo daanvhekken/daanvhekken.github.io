@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<title>Bloq</title>
 <head>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900'
           rel='stylesheet' type='text/css'>
@@ -7,6 +6,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <script type="text/javascript" src="/js/scripts.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+
+    <script type="text/javascript" src="js/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
     <!-- bootstrap javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
@@ -14,6 +21,9 @@
     <!-- programming language icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <title>Blog</title>
+    <meta name="description" content="Chronological journal about my program and career orientation experiences.">
 </head>
 <html lang="en">
     <body class="content">
@@ -52,89 +62,22 @@
     
         <div class="main-content" style="margin-left:300px">
             <div class="hide-large" style="margin-top:83px"></div>
-            <div class="center padding-32" id="about">
-                <div class="row mb-4">
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-header gradient-background">
-                              Blog post
-                            </div>
-                            <div class="card-body">
-                              <h5 class="card-title">Study choice activities</h5>
-                              <p class="card-text">Finishing MBO4 soon and wanting to learn more before i'm going to work full time somewhere.</p>
-                              <a href="#" class="btn btn-primary">Read more...</a>
-                            </div>
-                            <div class="card-footer text-white border-top border-white">
-                              1 min read.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-header gradient-background">
-                                Blog post
-                            </div>
-                            <div class="card-body">
-                              <h5 class="card-title">Study choice motivation</h5>
-                              <p class="card-text">At my current education i'm learning the programming language Java. I would like to learn multiple programming languages this way i'll be more flexible when i'm going to work at a company later. I also want to work in smaller and larger projects with smaller or larger teams.</p>
-                              <a href="#" class="btn btn-primary">Read more...</a>
-                            </div>
-                            <div class="card-footer text-white border-top border-white">
-                              3 min read.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-header gradient-background">
-                                Blog post
-                            </div>
-                            <div class="card-body">
-                              <h5 class="card-title">After completing the study</h5>
-                              <p class="card-text">I really want to work a back-end programming job in a bigger city. The company can't be to big because i do not want to be just another programmer. Web apps seem to interest me the most for now but i would like to explore other stuff.</p>
-                              <a href="#" class="btn btn-primary">Read more...</a>
-                            </div>
-                            <div class="card-footer text-white border-top border-white">
-                              2 min read.
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="row mb-4">
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-header gradient-background">
-                              Blog post
-                            </div>
-                            <div class="card-body">
-                              <h5 class="card-title">SWOT Analysis</h5>
-                              <h6><b>Strengths</b></h6>
-                              <p class="card-text">No 9 to 5 mentality. I can work great in a team. I've worked with scrum before. And my programmer is pretty decent already.</p>
-                              <h6><b>Weaknesses</b></h6>
-                              <p class="card-text">Afraid to speak up when i disagree.</p>
-                              <h6><b>Opportunities</b></h6>
-                              <p class="card-text">I could help others with the knowledge i already have. Work late or start early.</p>
-                              <h6><b>Threats</b></h6>
-                              <p class="card-text">I'm working on speaking up when i disagree so i do not think this will be a problem in studies / career.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-header gradient-background">
-                              Blog post
-                            </div>
-                            <div class="card-body">
-                              <h5 class="card-title">Programming experience</h5>
-                              <h6><b>Absence requests system</b></h6>
-                              <p class="card-text">At my previous education i was working on a application where you could keep track of the progress and presence of students. A part of this application was that students need to be able to request a day or more of absence. Me and my pair started working on this by creating a popup for students where they can enter a date, time and reason of absence. After this the teacher had an overview of all absence requests where they could chose to approve this absence request or deny it. Later on we added the option for students to see the status on their absence requests.</p>
-                              <h6><b>New website Rounded.com</b></h6>
-                              <p class="card-text">I work at a company called Rounded.com. Right now they have a very outdated webshop. Me and my colleaques are working on a better looking and faster webshop.</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="center padding-32" id="about">
+              <div id="blogstest" class="row mb-4">
+              </div>
+            </div>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+            <!-- Modal content -->
+              <div class="modal-content">
+                <div>
+                  <span class="close">&times;</span>
+                  <h5 id="modalTitle"></h5>
                 </div>
+                <p id="modalContent"></p>
+            </div>
+
             </div>
             <!-- Footer -->
             <footer class="text-center text-lg-start text-white footer-socials">
