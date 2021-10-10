@@ -241,6 +241,9 @@ footer {
     .footer-socials {
         display: none;
     }
+    .portfolio-card {
+        margin-top: 20px;
+    }
 }
 
 .main-content {
@@ -339,6 +342,7 @@ footer {
     margin      : 0 auto;
     border-color: #fff;
     margin-top  : 10px;
+    min-width   : 225px;
 }
 .info .card {
     width: 14rem;

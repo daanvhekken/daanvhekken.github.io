@@ -24,6 +24,7 @@ firebase.initializeApp(firebaseConfig);
             const data = doc.data();
 
             let column = document.createElement("div");
+            column.classList.add("col");
             column.classList.add("col-md-4");
 
             let card = document.createElement("div");
